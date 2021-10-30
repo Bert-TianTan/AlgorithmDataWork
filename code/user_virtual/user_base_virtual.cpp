@@ -10,7 +10,7 @@ UserOneVirtual::UserOneVirtual()
 
 }
 
-virtual UserOneVirtual::sayHello(){
+void UserOneVirtual::sayHello(){
 
     cout<< "sayHello" << endl;
 }

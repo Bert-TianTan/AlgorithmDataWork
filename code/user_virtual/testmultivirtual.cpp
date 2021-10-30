@@ -4,6 +4,7 @@ TestMultiVirtual::TestMultiVirtual()
 {
 }
 
-TestMultiVirtual::sayHelloWorld(){
-    sayHello();
+void TestMultiVirtual::sayHelloWorld(){
+
+//    sayHello();
 }
