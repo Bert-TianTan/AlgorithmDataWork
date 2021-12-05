@@ -62,7 +62,7 @@ int main()
 
     const char* data = "123455";
 
-    cout << strlen(data) <<endl;
+//    cout << strlen(data) <<endl;
 
     print_stod_stol();
 
