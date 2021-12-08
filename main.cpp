@@ -35,6 +35,7 @@ double sum2(Money_S mobj, int n, int m){
 }
 
 
+
 #include <functional>
 
 template<class F> double sum(F f, int n, int m){
