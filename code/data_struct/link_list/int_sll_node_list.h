@@ -10,9 +10,9 @@ public:
         this->next = 0;
     }
 
-    IntSLLNode(int i, IntSLLNode * in = 0){
-        this->info = i;
-        this->next = in;
+    IntSLLNode(int data, IntSLLNode * nextNode = 0){
+        this->info = data;
+        this->next = nextNode;
     }
 
 
@@ -54,8 +54,14 @@ private:
 };
 
 
+/**
+ * @brief testIntLinkedList
+ * 模拟示例都在这个方法中实现
+ */
+namespace LinkedSpace {
 
-
+    void testIntLinkedList();
+}
 
 
 

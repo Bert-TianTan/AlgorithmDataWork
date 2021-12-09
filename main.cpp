@@ -10,6 +10,7 @@
 #include <stdlib.h>
 
 
+#include "./code/data_struct/link_list/int_sll_node_list.h"
 
 //////////////////////////////操作符重载以及模板函数的使用 START ////////////////////////////////////
 using namespace std;
@@ -48,12 +49,7 @@ template<class F> double sum(F f, int n, int m){
 }
 
 
-
-//////////////////////////////操作符重载以及模板函数的使用 END ////////////////////////////////////
-
-int main()
-{
-
+void test(){
     TestMultiVirtual testMultiVirtual;
     testMultiVirtual = TestMultiVirtual();
 
@@ -76,7 +72,17 @@ int main()
 
 
     cout << "sum template  = "<<sum(negate<double>(), 4, 6) << endl;
+}
 
+
+//////////////////////////////操作符重载以及模板函数的使用 END ////////////////////////////////////
+
+int main()
+{
+
+
+
+    LinkedSpace::testIntLinkedList();
 
 
     return 0;
