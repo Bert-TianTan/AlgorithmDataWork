@@ -99,7 +99,6 @@ void Int_Linked_List::deleteNode(int data){
     *   why check head == tail ? make fast.
     *
     */
-
     if(head == tail && data == head->info){// if only one node in the list.
         IntSLLNode* temp = head;
         head = head->next;
@@ -136,6 +135,7 @@ bool Int_Linked_List::isInList(int data) const {
 }
 
 
+
 namespace LinkedSpace {
 
 
@@ -143,9 +143,13 @@ namespace LinkedSpace {
 
     void testIntLinkedList(){
 
+        printf("Int_Linked_List Ready Go....\n");
         Int_Linked_List* linkedList = new Int_Linked_List();
         linkedList->addToHead(233);
-        printf("linked already.\n");
+
+        delete linkedList;
+
+        printf("Int_Linked_List Finished....\n");
 
     }
 
