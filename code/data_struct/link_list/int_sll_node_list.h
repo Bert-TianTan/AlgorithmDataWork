@@ -46,11 +46,14 @@ public:
 
     bool isInList(int) const;
 
+    int insertBeforeData(int source, int target);
 
+    void printLinkedList();
 
 private:
     IntSLLNode* head;
     IntSLLNode* tail;
+    int size = 0;
 };
 
 
@@ -59,7 +62,6 @@ private:
  * 模拟示例都在这个方法中实现
  */
 namespace LinkedSpace {
-
 
     void testIntLinkedList();
 }

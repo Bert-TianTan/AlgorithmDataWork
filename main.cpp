@@ -12,7 +12,6 @@
 
 #include "./code/data_struct/link_list/int_sll_node_list.h"
 
-//////////////////////////////操作符重载以及模板函数的使用 START ////////////////////////////////////
 using namespace std;
 
 
@@ -59,12 +58,10 @@ void test(){
 
     const char* data = "123455";
 
-//    cout << strlen(data) <<endl;
+    cout << strlen(data) <<endl;
 
     print_stod_stol();
 
-
-    //运算符重写 函数对象
     Money datas;
     cout << "operator = " << datas(5) << endl;
 
@@ -75,16 +72,15 @@ void test(){
 }
 
 
-//////////////////////////////操作符重载以及模板函数的使用 END ////////////////////////////////////
 
 int main()
 {
-
 
 
     LinkedSpace::testIntLinkedList();
 
 
     return 0;
+
 }
 
