@@ -64,7 +64,6 @@ void test(){
     print_stod_stol();
 
 
-    //运算符重写 函数对象
     Money datas;
     cout << "operator = " << datas(5) << endl;
 
