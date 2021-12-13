@@ -55,8 +55,10 @@ private:
 
 
 /**
+ *
+ * All simulation test case
+ *
  * @brief testIntLinkedList
- * 模拟示例都在这个方法中实现
  */
 namespace LinkedSpace {
 

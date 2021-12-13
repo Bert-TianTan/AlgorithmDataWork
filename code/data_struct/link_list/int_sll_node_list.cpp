@@ -18,13 +18,14 @@ void Int_Linked_List::addToHead(int data){
 }
 
 /**
- * 需要查看尾节点有没有元素
+ *
  * @brief Int_Linked_List::addToTail
  * @param data
  */
 void Int_Linked_List::addToTail(int data){
     if(tail != 0){//list not empty
-        //在尾节点添加下一个节点
+
+        //add new node in tail back.
         tail->next = new IntSLLNode(data);
         //move tail pointer to last node.
         tail = tail->next;
@@ -37,7 +38,7 @@ void Int_Linked_List::addToTail(int data){
 
 int Int_Linked_List::deleteFromHead(){
 
-    //集合为空，则返回-1
+    //linked empty, return -1
     if(head == 0){
         return -1;
     }
@@ -49,7 +50,7 @@ int Int_Linked_List::deleteFromHead(){
         head = tail = 0;
     }
     else {
-        //head指向下一个节点
+        //head point to next new node.
         head = head->next;
     }
 
@@ -74,7 +75,7 @@ int Int_Linked_List::deleteFromTail(){
     else {
         IntSLLNode* temp;//find the predecessor of tail.
 
-        //不知道tail的前一个节点，所以要从头进行遍历
+        //need know tail prev pointer, so need loop from head.
         for(temp=head;temp->next != tail; temp=temp->next);
 
         delete tail;
