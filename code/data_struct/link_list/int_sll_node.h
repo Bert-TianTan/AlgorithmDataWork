@@ -7,33 +7,35 @@ class IntSLLNode
 public:
 
     IntSLLNode(){
-        this->next = 0;
+        next = nullptr;
     }
 
-    IntSLLNode(int data, IntSLLNode * nextNode = 0){
-        this->info = data;
-        this->next = nextNode;
+    IntSLLNode(int i, IntSLLNode * in = 0){
+        this->info = i;
+        this->next = in;
     }
 
 
+    //存储的数据
     int info;
 
+    //下一节点的地址
     IntSLLNode *next;
-
 };
 
 
+//int linked list.
 class Int_Linked_List {
 
 public:
     Int_Linked_List(){
-        head = tail = 0;
+        this->head = this->tail = nullptr;
     }
 
     ~Int_Linked_List();
 
     int isEmpty(){
-        return head == 0;
+        return head == nullptr;
     }
 
     void addToHead(int);
@@ -46,31 +48,12 @@ public:
 
     bool isInList(int) const;
 
-    int insertBeforeData(int source, int target);
-
-    void printLinkedList();
-
 private:
     IntSLLNode* head;
     IntSLLNode* tail;
-    int size = 0;
+
+
 };
-
-
-/**
- *
- * All simulation test case
- *
- * @brief testIntLinkedList
- */
-namespace LinkedSpace {
-
-    void testIntLinkedList();
-}
-
-
-
-
 
 
 

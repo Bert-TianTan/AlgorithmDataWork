@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-// π”√stod  stol
+//stod  stol
 void print_stod_stol();
 
 
