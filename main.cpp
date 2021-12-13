@@ -12,6 +12,9 @@
 
 #include "./code/data_struct/link_list/int_sll_node_list.h"
 
+
+#include "./code/data_struct/link_list/doubly_linked_list.h"
+
 ////////////////////////////// START ////////////////////////////////////
 
 using namespace std;
@@ -81,8 +84,8 @@ int main()
 {
 
 
-    LinkedSpace::testIntLinkedList();
-
+//    LinkedSpace::testIntLinkedList();
+    Doubly_Linked_List_Space::testDoubly_Linked_List();
 
     return 0;
 

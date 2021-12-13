@@ -157,7 +157,7 @@ void Int_Linked_List::printLinkedList(){
     IntSLLNode* node;
 
     int index = 0;
-    for(node = head; node != nullptr; node = node->next){
+    for(node = head; node != 0; node = node->next){
          printf("linked size = %d, node  index = %d, value = %d\n", size, index++, node->info);
     }
 }
@@ -240,7 +240,7 @@ namespace LinkedSpace {
 
         delete linkedList;
 
-        printf("value = %d, %d, %d, %d, %d, %d", 1%5, 2%5, 3%5, 4%5, 5%5, 6%5);
+        printf("value = %d, %d, %d, %d, %d, %d\n", 1%5, 2%5, 3%5, 4%5, 5%5, 6%5);
         printf("Int_Linked_List Finished....\n");
 
     }

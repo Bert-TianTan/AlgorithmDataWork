@@ -28,6 +28,7 @@ class Int_Linked_List {
 public:
     Int_Linked_List(){
         head = tail = 0;
+        size = 0;
     }
 
     ~Int_Linked_List();
@@ -53,7 +54,7 @@ public:
 private:
     IntSLLNode* head;
     IntSLLNode* tail;
-    int size = 0;
+    int size;
 };
 
 
