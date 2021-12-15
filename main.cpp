@@ -80,12 +80,37 @@ void test(){
 ////////////////////////////// END ////////////////////////////////////
 
 
+void insertSort(int data[], int n){
+    if(n < 1)
+        return;
+    for(int i = 1; i < n; i++){
+        int j = i - 1;
+        for(; j>= 0; j--){
+            if(data[j] > data[i]){
+                data[j+1] = data[j];
+            }
+            else {
+                break;
+            }
+        }
+        data[j+1] = data[i];
+    }
+
+}
+
 int main()
 {
 
 
 //    LinkedSpace::testIntLinkedList();
-    Doubly_Linked_List_Space::testDoubly_Linked_List();
+//    Doubly_Linked_List_Space::testDoubly_Linked_List();
+
+    int datas[] = {2, 3, 4, 0, 8, 7, 5};
+
+    insertSort(datas, 3);
+    for(int i = 0; i < sizeof (datas)/sizeof (datas[0]); i++){
+        printf("index %d, value = %d\n", i, datas[i]);
+    }
 
     return 0;
 
