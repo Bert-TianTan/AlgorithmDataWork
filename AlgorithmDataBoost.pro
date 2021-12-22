@@ -7,6 +7,7 @@ CONFIG -= qt
 SOURCES += main.cpp \
     code/data_struct/link_list/doubly_linked_list.cpp \
     code/data_struct/link_list/int_sll_node_list.cpp \
+    code/sortion/insertion_sort.cpp \
     code/system_learn/strtod_stol_test.c \
     code/user_virtual/user_base_virtual.cpp \
     code/user_virtual/userone.cpp \
@@ -16,6 +17,7 @@ SOURCES += main.cpp \
 HEADERS += \
     code/data_struct/link_list/doubly_linked_list.h \
     code/data_struct/link_list/int_sll_node_list.h \
+    code/sortion/insertion_sort.h \
     code/system_learn/strtod_stol_test.h \
     code/user_virtual/user_base_virtual.h \
     code/user_virtual/userone.h \

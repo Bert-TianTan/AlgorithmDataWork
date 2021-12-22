@@ -15,6 +15,9 @@
 
 #include "./code/data_struct/link_list/doubly_linked_list.h"
 
+
+#include "./code/sortion/insertion_sort.h"
+
 ////////////////////////////// START ////////////////////////////////////
 
 using namespace std;
@@ -107,10 +110,12 @@ int main()
 
     int datas[] = {2, 3, 4, 0, 8, 7, 5};
 
-    insertSort(datas, 3);
-    for(int i = 0; i < sizeof (datas)/sizeof (datas[0]); i++){
-        printf("index %d, value = %d\n", i, datas[i]);
-    }
+//    insertSort(datas, 3);
+//    for(int i = 0; i < sizeof (datas)/sizeof (datas[0]); i++){
+//        printf("index %d, value = %d\n", i, datas[i]);
+//    }
+
+    Sortion::sortSample();
 
     return 0;
 
