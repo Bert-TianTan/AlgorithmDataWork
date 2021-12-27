@@ -20,11 +20,15 @@ void printArray(int index){
 void insertion_sort(){
     printf("data array length = %d \n", dataLen);
     for(unsigned int i = 1; i < sizeof (datas)/sizeof (datas[0]); i++){
+         // 寻找元素 arr[i] 合适的插入位置
         for(int j = i; j > 0; j--){
             if(datas[j] < datas[j-1]){
                 int temp = datas[j];
                 datas[j] = datas[j-1];
                 datas[j-1] = temp;
+            }
+            else {
+                break;
             }
             printArray(i);
         }
@@ -57,12 +61,11 @@ void insertion_sort_high_v2(int data[], int eleNum){
                 data[j+1] = data[j];
             }
             else {
-
                 //data[j]右边（j+1）的数据肯定比当前元素大
                 break;
             }
         }
-        //插入数据
+        //最后插入数据
         data[j+1] = value;
     }
 
@@ -83,5 +86,8 @@ namespace Sortion {
     void sortSample(){
 //        insertion_sort();
         insertion_sort_high_v2(datas, dataLen);
+        for(int j = 1; j > 0; j--){
+            printf("#############################\n");
+        }
     }
 }
