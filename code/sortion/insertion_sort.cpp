@@ -88,6 +88,10 @@ void shell_sort(int data[], int dataLength){
 
             int tempValue = data[i];
 
+            //more sample.
+//            for(j = i; j >= gap && tempValue < data[j-gap]; j-=gap){
+//                data[j] = data[j - gap];
+//            }
             for(j = i; j >= gap; j-=gap){
                 if(tempValue < data[j-gap]){
                     data[j] = data[j - gap];
