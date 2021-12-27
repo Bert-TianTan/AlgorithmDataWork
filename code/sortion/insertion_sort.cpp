@@ -36,7 +36,42 @@ void insertion_sort(){
     printf("\n");
 }
 
+/**
+ * 交换的位置少
+ * @brief insertion_sort_high_v2
+ * @param data
+ * @param eleNum
+ */
+void insertion_sort_high_v2(int data[], int eleNum){
+    if(eleNum < 1){
+        return;
+    }
 
+    for(int i = 1; i <eleNum; ++i){
+        int value = data[i];
+        int j = i - 1;
+        //查找插入的位置
+        for(;j>=0; --j){
+            if(data[j] > value){
+                //数据移动
+                data[j+1] = data[j];
+            }
+            else {
+
+                //data[j]右边（j+1）的数据肯定比当前元素大
+                break;
+            }
+        }
+        //插入数据
+        data[j+1] = value;
+    }
+
+    for(unsigned int i = 0; i < sizeof (datas)/sizeof (datas[0]); i++){
+        printf("%d ", datas[i]);
+    }
+    printf("\n");
+
+}
 
 
 
@@ -46,6 +81,7 @@ void shell_sort(){
 
 namespace Sortion {
     void sortSample(){
-        insertion_sort();
+//        insertion_sort();
+        insertion_sort_high_v2(datas, dataLen);
     }
 }
