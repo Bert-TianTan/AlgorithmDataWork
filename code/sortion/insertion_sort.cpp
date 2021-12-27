@@ -1,7 +1,7 @@
 #include "insertion_sort.h"
 #include "stdio.h"
 
-int datas[] = {9, 2, 3, 4, 1, 8, 11, 7, 5};
+int datas[] = {9, 2, 3, 4, 1, 8, 11, 7, 5, 0, 23, 6};
 
 unsigned dataLen = sizeof (datas)/sizeof (datas[0]);
 
@@ -77,15 +77,40 @@ void insertion_sort_high_v2(int data[], int eleNum){
 }
 
 
+//
 
-void shell_sort(){
+void shell_sort(int data[], int dataLength){
 
+    int j = 0;
+
+    for(int gap = dataLength/2; gap > 0; gap = gap/2){
+        for(int i = gap; i < dataLength; i++){
+
+            int tempValue = data[i];
+
+            for(j = i; j >= gap; j-=gap){
+                if(tempValue < data[j-gap]){
+                    data[j] = data[j - gap];
+                }
+                else {
+                    break;
+                }
+            }
+            data[j] = tempValue;
+
+        }
+    }
+    for(int i = 0; i < dataLength; i++){
+        printf("%d ", data[i]);
+    }
+    printf("\n");
 }
 
 namespace Sortion {
     void sortSample(){
 //        insertion_sort();
-        insertion_sort_high_v2(datas, dataLen);
+//        insertion_sort_high_v2(datas, dataLen);
+        shell_sort(datas, dataLen);
         for(int j = 1; j > 0; j--){
             printf("#############################\n");
         }
