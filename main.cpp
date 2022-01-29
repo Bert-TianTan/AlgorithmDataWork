@@ -80,6 +80,24 @@ void test(){
 ////////////////////////////// END ////////////////////////////////////
 
 
+//insert sort
+void insertSortFun(){
+
+    int data[10] = {7, 6, 9, 3, 1, 5, 2, 4, 0};
+
+    int len = sizeof (data)/sizeof (data[0]);
+
+    for(int i = 0; i < len;i++){
+        for(int j = i; j > 0;j--){
+
+        }
+    }
+
+
+
+}
+
+
 int main()
 {
 
